@@ -27,7 +27,7 @@ func (e ExternalService) GetCurrency(coinName string) (float64, error) {
 	}
 
 	req.Header.Set("Accepts", "application/json")
-	req.Header.Set("Authorization", "Apikey  "+"b50c8970d698bf376f3812aaf8d82a371865102c6c6ff95f2c8e5ed4373790c8")
+	req.Header.Set("Authorization", "Apikey  "+e.ClientKey)
 
 	resp, err := client.Do(req)
 	if err != nil {
